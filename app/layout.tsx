@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap
 import type { Metadata } from 'next';
 import './globals.css';
+import Script from 'next/script'; // Importa Script de Next.js
 
 export const metadata: Metadata = {
   title: 'Empresa de Construcción',
@@ -15,8 +16,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+        {/* Aquí usamos Script para cargar Bootstrap de manera asíncrona */}
+        <Script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+          strategy="beforeInteractive" // Carga el script antes de la interacción del usuario
+        />
+        
         {/* Navbar de Bootstrap fijo en la parte superior */}
         <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
           <div className="container-fluid">
