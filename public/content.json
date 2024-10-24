@@ -1,0 +1,25 @@
+{
+    "videos": [
+      {
+        "title": "Unboxing de Remodelación de Cocina",
+        "url": "https://www.youtube.com/embed/VIDEO_ID_1"
+      },
+      {
+        "title": "Proceso de Ampliación de Terraza",
+        "url": "https://www.youtube.com/embed/VIDEO_ID_2"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Remodelación de cocina",
+        "description": "Realizamos una remodelación completa de esta cocina, con acabados modernos y funcionales.",
+        "image": "/images/proyecto1.jpg"
+      },
+      {
+        "title": "Ampliación de terraza",
+        "description": "Construimos una terraza adicional con espacio para reuniones familiares.",
+        "image": "/images/proyecto2.jpg"
+      }
+    ]
+  }
+  
