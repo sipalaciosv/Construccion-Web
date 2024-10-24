@@ -15,12 +15,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
         {/* Navbar de Bootstrap fijo en la parte superior */}
         <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-          <div className="container">
-            <a className="navbar-brand" href="#inicio">
-              Construcción
-            </a>
+          <div className="container-fluid">
+            <a className="navbar-brand" href="#inicio">Construcción</a>
             <button
               className="navbar-toggler"
               type="button"
@@ -35,29 +35,19 @@ export default function RootLayout({
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="#inicio">
-                    Inicio
-                  </a>
+                  <a className="nav-link" href="#inicio">Inicio</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#servicios">
-                    Servicios
-                  </a>
+                  <a className="nav-link" href="#servicios">Servicios</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#proyectos">
-                    Proyectos
-                  </a>
+                  <a className="nav-link" href="#proyectos">Proyectos</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#videos">
-                    Videos
-                  </a>
+                  <a className="nav-link" href="#videos">Videos</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#contacto">
-                    Contacto
-                  </a>
+                  <a className="nav-link" href="#contacto">Contacto</a>
                 </li>
               </ul>
 

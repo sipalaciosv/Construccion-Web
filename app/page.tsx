@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container mt-5">
+    <div className="container-fluid mt-5">
       {/* Sección de Inicio */}
       <div id="inicio" className="jumbotron bg-light p-5 rounded min-vh-100 d-flex align-items-center">
         <div>
@@ -52,7 +52,7 @@ export default function Home() {
         <div>
           <h2>Servicios que ofrecemos</h2>
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-sm-12 col-md-4">
               <div className="card mb-4 shadow-sm">
                 <div className="card-body">
                   <h5 className="card-title">Reparaciones</h5>
@@ -60,7 +60,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-sm-12 col-md-4">
               <div className="card mb-4 shadow-sm">
                 <div className="card-body">
                   <h5 className="card-title">Construcciones pequeñas</h5>
@@ -68,7 +68,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-sm-12 col-md-4">
               <div className="card mb-4 shadow-sm">
                 <div className="card-body">
                   <h5 className="card-title">Pintura y acabados</h5>
@@ -86,9 +86,9 @@ export default function Home() {
           <h2>Proyectos realizados</h2>
           <div className="row">
             {content.projects.map((project, index) => (
-              <div key={index} className="col-md-4">
+              <div key={index} className="col-sm-12 col-md-4">
                 <div className="card mb-4 shadow-sm">
-                  <img src={project.image} className="card-img-top" alt={project.title} />
+                  <img src={project.image} className="card-img-top img-fluid" alt={project.title} />
                   <div className="card-body">
                     <h5 className="card-title">{project.title}</h5>
                     <p className="card-text">{project.description}</p>
@@ -106,15 +106,15 @@ export default function Home() {
           <h2>Unboxing y Videos de los Trabajos</h2>
           {content.videos.map((video, index) => (
             <div key={index} className="mb-4">
-              <iframe
-                width="560"
-                height="315"
-                src={video.url}
-                title={video.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              <div className="embed-responsive embed-responsive-16by9">
+                <iframe
+                  className="embed-responsive-item"
+                  src={video.url}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
               <p>{video.title}</p>
             </div>
           ))}
